@@ -2,9 +2,13 @@
 class Book extends CI_Model {
   function __construct(){
     parent::__construct();
+    $this->load->database();
   }
 
-  function all(){}
+  function all(){
+    $query = $this->db->get("books", 10);
+    return $query->result();
+  }
 
   function find(){}
 

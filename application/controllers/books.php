@@ -6,7 +6,8 @@ class Books extends CI_Controller {
   }
 
   function index(){
-    $this->template->load('template', 'books/index');
+    $data['books'] = $this->book->all();
+    $this->template->load('template', 'books/index', $data);
   }
 }
 ?>
