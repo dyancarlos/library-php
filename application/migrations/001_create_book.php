@@ -12,6 +12,7 @@ class Migration_Create_Book extends CI_Migration {
       'title' => array(
         'type' => 'VARCHAR',
         'constraint' => '100',
+        'null' => TRUE,
       ),
       'description' => array(
         'type' => 'TEXT',
@@ -20,14 +21,22 @@ class Migration_Create_Book extends CI_Migration {
       'pages' => array(
         'type' => 'INT',
         'constraint' => 4,
+        'null' => TRUE,
       ),
       'authors' => array(
         'type' => 'VARCHAR',
         'constraint' => '100',
+        'null' => TRUE,
       ),
       'publisher' => array(
         'type' => 'VARCHAR',
         'constraint' => '100',
+        'null' => TRUE,
+      ),
+      'cover' => array(
+        'type' => 'VARCHAR',
+        'constraint' => '255',
+        'null' => TRUE,
       ),
       'user_id' => array(
         'type' => 'INT',
