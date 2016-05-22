@@ -1,9 +1,16 @@
+<?php
+  if(!$this->session->userdata('logged'))
+    redirect ('/login');
+?>
 <html>
 <body>
   <div class="header">
     <h1>Header</h1>
+    <a href="<?= base_url('/login/logout') ?>">Sair</a>
   </div>
-  
+
+  <br />
+
   <div class="main">
     <?= $contents; ?>
   </div>
