@@ -9,7 +9,7 @@
     <a href="<?= base_url('/login/logout') ?>">Sair</a>
   </div>
 
-  <br />
+  <br /><br />
 
   <div class="main">
     <?= $contents; ?>

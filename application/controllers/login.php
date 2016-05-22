@@ -12,9 +12,10 @@ class Login extends CI_Controller {
   function authenticate(){
     $email    = $this->input->post('email');
     $password = $this->input->post('password');
-        
+
     if($this->user->verify($email,$password)): 
-      $this->session->set_userdata('logged', array('email'=>$email));
+      $this->session->set_userdata('logged', array('id'    => $this->user->get_id_from_email($email),
+                                                   'email' => $email));
       redirect('/books');
     else:
       $data['message'] = "Usuário ou senha incorretos";

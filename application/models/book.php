@@ -16,7 +16,8 @@ class Book extends CI_Model {
   }
 
   function save(){
-    $data = $this->input->post();
+    $data            = $this->input->post();
+    $data['user_id'] = $this->session->userdata('logged')['id'];
     return $this->db->insert('books', $data);  
   }
 
