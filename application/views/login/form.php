@@ -1,3 +1,9 @@
+<? if(isset($message)): ?>
+  <?= $message ?>
+<? endif; ?>
+
+<br />
+
 <form action="<?= base_url('/login/authenticate') ?>" method="post">
   E-mail <br />
   <input type="text" name="email" />
