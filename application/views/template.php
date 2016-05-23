@@ -15,8 +15,21 @@
     </div>
     
     <div class="footer">
-      <a href="<?= base_url("/books/form") ?>" class="add-book">Adicionar</a>
-      <a href="<?= base_url('/login/logout') ?>">Sair</a>
+      <div class="footer-left">
+        <ul>
+          <li><img src="<?= base_url('assets/imgs/add.png') ?>" /><a href="<?= base_url("/books/form") ?>" class="add-book">Adicionar Livro</a></li>
+          <li><a href="<?= base_url("/books") ?>" class="add-book">Início</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <h3><?= $this->session->userdata('logged')['email'] ?></h3>
+        <ul>
+          <li><a href="<?= base_url('/login/logout') ?>">Meus Livros</a></li> <small>ou</small>
+          <li><a href="<?= base_url('/login/logout') ?>">Sair</a></li>
+        </ul>
+      </div>
+      <div class="clear"></div>
     </div>
   </body>
 </html>
