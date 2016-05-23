@@ -26,7 +26,7 @@ class Books extends CI_Controller {
 
   function create(){
     if($this->book->save()):
-      $this->index();
+      redirect("/books");
     else:
       echo "error";
     endif;
