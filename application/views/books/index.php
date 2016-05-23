@@ -1,7 +1,11 @@
-<a href="<?= base_url("/books/form") ?>">Adicionar</a>
+<div class="books">
+  <div class="books-in">
+    <?php foreach($books as $book): ?>
 
-<br />
+      <div class="book">
+        <img src="<?= $book->cover ?>" />
+      </div>
 
-<?php foreach($books as $book): ?>
-  <?= $book->title ?><br />
-<?php endforeach; ?>
+    <?php endforeach; ?>
+  </div>
+</div>

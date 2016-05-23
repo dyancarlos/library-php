@@ -1,0 +1,47 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 12px;
+  font-family: Helvetica;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  padding: 20px;
+  background: #495263;
+  width: 100%;
+  border-top: 1px solid #666;
+  color: #fff;
+}
+
+.books {
+  background: url("../imgs/shelf.png") top center repeat-y;
+  width: 100%;
+  height: 1000px;
+}
+  
+  .books-in {
+    width: 85%;
+    position: relative;
+    top: 70px;
+    margin: 0 auto;
+  }
+  
+  .book {
+    margin: 0px 15px 115px 0px;
+    display: inline-block;
+  }
+
+  .book img {
+    border-radius: 5px;
+  }
+
