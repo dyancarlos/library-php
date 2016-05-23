@@ -34,6 +34,7 @@ body {
     position: relative;
     top: 70px;
     margin: 0 auto;
+    text-align: center;
   }
   
   .book {
@@ -43,5 +44,21 @@ body {
 
   .book img {
     border-radius: 5px;
+  }
+
+  .book .book-cover {
+    position: relative;
+    text-align: center;
+  }
+  
+  .book .book-cover p {
+    position: absolute;
+    top: 35%;
+    left: 0; 
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    text-shadow: 1px 1px #000;
   }
 

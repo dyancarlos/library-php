@@ -6,7 +6,7 @@ class Book extends CI_Model {
   }
 
   function all(){
-    $query = $this->db->get("books", 10);
+    $query = $this->db->get("books");
     return $query->result();
   }
 
