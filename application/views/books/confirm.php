@@ -1,7 +1,3 @@
-<a href="<?= base_url('/books/form') ?>">Refazer Consulta</a>
-
-<br /><br />
-
 <? if(!$size == 0): ?>
   <form action="<?= $action ?>" method="post">
     <input type="hidden" name="cover" value="<?= $book['cover'] ?>" />
@@ -11,20 +7,41 @@
     <input type="hidden" name="publisher" value="<?= $book['publisher'] ?>" />
     <input type="hidden" name="description" value="<?= $book['description'] ?>" />
 
-    <img src="<?= $book['cover'] ?>" />
-  
-    <p>Titulo: <?= $book['title'] ?></p>
-       
-    <p>Autor: <?= $book['authors'] ?></p>
-    
-    <p>Paginas: <?= $book['pageCount'] ?></p>
-          
-    <p>Editora: <?= $book['publisher'] ?></p>
+    <div class="book-confirm">
+      <div class="cover">
+        <? if(empty($book['book'])): ?>
+          <div class="alternative-cover">
+            <img src="<?= base_url('assets/imgs/cover.png') ?>" />
+            <p><?= $book['title'] ?></p>
+          </div>          
+        <? else: ?>
+          <img src="<?= $book['cover'] ?>" />
+        <? endif; ?>
+      </div>
+      
+      <p><label>Título:</label> 
+      <?= $book['title'] ?></p>
 
-    <p>Descricao: <?= $book['description'] ?></p>
-  
-    <input type="submit" value="Confirmar & Salvar" />
+      <p><label>Autor:</label> 
+      <?= $book['authors'] ?></p>
+
+      <p><label>Páginas:</label> 
+      <?= $book['pageCount'] ?></p>
+
+      <p><label>Editora:</label> 
+      <?= $book['publisher'] ?></p>
+
+      <br />
+
+      <p class="description"><?= $book['description'] ?></p>
+
+      <br />
+
+      <input type="submit" value="Adicionar" class="ui button green small" />
+      <a href="<?= base_url('/books') ?>" class="ui button basic red small">Cancelar</a>
+    </div>
   </form>
 <? else: ?>
-  <p>Livro Nao Encontrado</p>
+  <h3>Livro não Encontrado!</h3><br />
+  <a href="<?= base_url('/books') ?>" class="ui button small">Voltar</a>
 <? endif; ?>

@@ -10,9 +10,9 @@ body {
 }
 
 .main {
-  width: 300px;
+  width: 350px;
   padding: 30px;
-  margin: 200px auto 0 auto;
+  margin: 150px auto 0 auto;
   background: #FFF;
   border-radius: 8px;
   -webkit-box-shadow: 0px 0px 3px 1px #DDD;
@@ -39,3 +39,41 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+
+.book-confirm {
+  color: #666;
+  font-size: 15px;
+}
+.book-confirm label {
+  float: left;
+  width: 4em;
+  text-align: right;
+  color: #333;
+}
+.book-confirm p.description {
+  text-align: justify;
+}
+.book-confirm .cover {
+  background: #EFEFEF;
+  padding: 15px;
+  margin: -30px -30px 30px -30px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+  .book-confirm .alternative-cover {
+    position: relative;
+    width: 140px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .book-confirm .alternative-cover p {
+    position: absolute;
+    top: 35%;
+    left: 0; 
+    color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    text-shadow: 1px 1px #000;
+  }

@@ -16,7 +16,7 @@ class Books extends CI_Controller {
     $data['size']   = $data['json']->totalItems; 
     $data['action'] = base_url('/books/create');
     $data['book']   = $this->book->bookAttributes($data['json']);
-    $this->template->load('template', 'books/confirm', $data); 
+    $this->template->load('login', 'books/confirm', $data); 
   }
 
   function create(){
