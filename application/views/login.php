@@ -1,15 +1,15 @@
+<!DOCTYPE html>
 <html>
-<body>
-  <div class="header">
-    <h1>Login</h1>
-  </div>
-  
-  <div class="main">
-    <?= $contents; ?>
-  </div>
-  
-  <div class="footer">
-  </div>
-</body>
+  <head>
+    <meta charset=utf-8" />
+    <title>Books</title>
+    <link rel="stylesheet" href="<?= base_url('assets/css/login.css') ?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/button.css') ?>" />
+  </head>
+  <body>
+    <div class="main">
+      <?= $contents; ?>
+    </div>
+  </body>
 </html>
 

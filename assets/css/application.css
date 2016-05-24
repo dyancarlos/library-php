@@ -32,21 +32,7 @@ body {
   }
     .footer .footer-left ul li {
       display: inline;
-      margin: 0px 20px 0px 0px;
     }
-
-    .footer .footer-left ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    .footer .footer-left ul li img {
-      position: relative;
-      top: 5px;
-      left: -2px;
-    }
-
 
   .footer .footer-right {
     background: #3B414F;
