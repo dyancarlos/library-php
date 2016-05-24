@@ -64,9 +64,11 @@ body {
     position: absolute;
     top: 35%;
     left: 0; 
+    width: 100%;
     color: #FFF;
     font-size: 14px;
     font-weight: bold;
     padding: 10px;
     text-shadow: 1px 1px #000;
+    box-sizing: border-box;
   }
