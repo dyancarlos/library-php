@@ -85,11 +85,15 @@ body {
     text-align: center;
   }
   
+  .book .book-cover a {
+    color: #FFF;
+    text-decoration: none;
+  }
+
   .book .book-cover p {
     position: absolute;
     top: 35%;
     left: 0; 
-    color: #FFF;
     width: 100%;
     font-size: 14px;
     font-weight: bold;

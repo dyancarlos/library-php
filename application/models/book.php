@@ -10,6 +10,11 @@ class Book extends CI_Model {
     return $query->result();
   }
 
+  function find($id){
+    $query = $this->db->get_where("books", array('id'=>$id));
+    return $query->row();
+  }
+
   function find_by_user(){
     $user_id = $this->session->userdata('logged')['id'];
     $query   = $this->db->get_where("books", array('user_id'=>$user_id));
@@ -27,8 +32,6 @@ class Book extends CI_Model {
     return $this->db->insert('books', $data);  
   }
 
-  // object is not null, but he comes empty
-  // with a 'totalItems' value of 0
   function bookAttributes($obj){
     if($obj->totalItems > 0):
       $shortPath = $obj->items[0]->volumeInfo;
