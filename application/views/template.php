@@ -37,7 +37,7 @@
       <div class="footer-right">
         <h3><?= $this->session->userdata('logged')['email'] ?></h3>
         <ul>
-          <li><a href="<?= base_url('/login/logout') ?>">Meus Livros</a></li> <small>ou</small>
+          <li><a href="<?= base_url('/books/my') ?>">Meus Livros</a></li> <small>ou</small>
           <li><a href="<?= base_url('/login/logout') ?>">Sair</a></li>
         </ul>
       </div>

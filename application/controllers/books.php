@@ -19,11 +19,24 @@ class Books extends CI_Controller {
     $this->template->load('login', 'books/confirm', $data); 
   }
 
+  function my(){
+    $data['books'] = $this->book->find_by_user();
+    $this->template->load('template', 'books/my', $data);
+  }
+
   function create(){
     if($this->book->save()):
       redirect("/books");
     else:
       echo "error";
+    endif;
+  }
+
+  public function destroy($id) {
+    if($this->book->destroy($id)):
+      redirect("/books/my");
+    else:
+      echo "Erro";
     endif;
   }
 }

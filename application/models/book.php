@@ -10,6 +10,12 @@ class Book extends CI_Model {
     return $query->result();
   }
 
+  function find_by_user(){
+    $user_id = $this->session->userdata('logged')['id'];
+    $query   = $this->db->get_where("books", array('user_id'=>$user_id));
+    return $query->result();
+  }
+
   function find_by_isbn($isbn){
     $book = file_get_contents("https://www.googleapis.com/books/v1/volumes?q=isbn:".$isbn);
     return json_decode($book);
@@ -35,6 +41,11 @@ class Book extends CI_Model {
         'cover' => isset($shortPath->imageLinks->thumbnail) ? $shortPath->imageLinks->thumbnail : ""
       );
     endif;
+  }
+
+  function destroy($id){
+    $user_id = $this->session->userdata('logged')['id'];
+    return $this->db->where('id', $id)->where('user_id', $user_id)->delete('books');
   }
 }
 ?>
