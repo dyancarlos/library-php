@@ -9,6 +9,10 @@ class Login extends CI_Controller {
     $this->template->load('login', 'login/form');
   }
 
+  function signup(){
+    $this->template->load('login', 'login/signup');
+  }
+
   function authenticate(){
     $email    = $this->input->post('email');
     $password = $this->input->post('password');
@@ -25,7 +29,7 @@ class Login extends CI_Controller {
 
   function logout(){
     $this->session->sess_destroy();
-    $this->index();
+    redirect('/login');
   }
 }
 ?>

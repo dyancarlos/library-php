@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset=utf-8" />
-    <title>Books</title>
+    <title>Login</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/login.css') ?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/button.css') ?>" />
   </head>

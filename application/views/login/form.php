@@ -20,5 +20,5 @@
   <br />
   
   <input type="submit" value="Fazer Login" class="ui button blue full-size" /><br /><br />
-  <a href="#" class="ui button green full-size">Criar minha Conta</a>
+  <a href="<?= base_url('/login/signup') ?>" class="ui button green full-size">Criar minha Conta</a>
 </form>

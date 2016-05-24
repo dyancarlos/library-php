@@ -14,5 +14,11 @@ class User extends CI_Model {
     $query = $this->db->get_where('users', array('email'=>$email));
     return $query->row_array()['id'];
   }
+
+  function save(){
+    $data             = $this->input->post();
+    $data['password'] = md5($data['password']); 
+    return $this->db->insert('users', $data); 
+  }
 }
 ?>
