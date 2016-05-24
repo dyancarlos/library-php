@@ -34,6 +34,14 @@ body {
       display: inline;
     }
 
+  .new-book-form {
+    float: left;
+    width: 500px;
+    padding: 23px;
+    text-align: center;
+    background: #3B414F;
+  }
+
   .footer .footer-right {
     background: #3B414F;
     float: right;
@@ -86,3 +94,12 @@ body {
     text-shadow: 1px 1px #000;
   }
 
+.input {
+  width: 330px;
+  padding: 10px;
+  font-size: 18px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #DDD;
+  border-bottom: 2px solid #DDD;
+}

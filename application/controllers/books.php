@@ -11,11 +11,6 @@ class Books extends CI_Controller {
     $this->template->load('template', 'books/index', $data);
   }
 
-  function form(){
-    $data['action'] = base_url('/books/confirm');
-    $this->template->load('template', 'books/form', $data);
-  }
-
   function confirm(){
     $data['json']   = $this->book->find_by_isbn($_POST['isbn']);
     $data['size']   = $data['json']->totalItems; 
