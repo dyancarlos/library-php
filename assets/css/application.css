@@ -64,17 +64,19 @@ body {
   .books-in {
     width: 85%;
     position: relative;
-    top: 70px;
+    top: 85px;
     margin: 0 auto;
     text-align: center;
   }
   
   .book {
-    margin: 0px 15px 115px 0px;
+    margin: 0px 15px 120px 0px;
     display: inline-block;
+    vertical-align: bottom;
   }
 
   .book img {
+    height: 195px;
     border-radius: 5px;
   }
 

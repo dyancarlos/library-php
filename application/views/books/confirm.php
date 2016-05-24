@@ -19,20 +19,10 @@
         <? endif; ?>
       </div>
       
-      <p><label>Título:</label> 
-      <?= $book['title'] ?></p>
-
-      <p><label>Autor:</label> 
-      <?= $book['authors'] ?></p>
-
-      <p><label>Páginas:</label> 
-      <?= $book['pageCount'] ?></p>
-
-      <p><label>Editora:</label> 
-      <?= $book['publisher'] ?></p>
-
-      <br />
-
+      <h2><?= $book['title'] ?></h2>
+      <p><small><?= $book['authors'] ?></small></p>
+      <p><small><?= $book['publisher'] ?></small></p>
+      <p><small><?= $book['pageCount'] ?> páginas</small></p><br />
       <p class="description"><?= $book['description'] ?></p>
 
       <br />
@@ -42,6 +32,8 @@
     </div>
   </form>
 <? else: ?>
-  <h3>Livro não Encontrado!</h3><br />
-  <a href="<?= base_url('/books') ?>" class="ui button small">Voltar</a>
+  <div class="book-confirm">
+    <h2>Livro não Encontrado!</h2><br />
+    <a href="<?= base_url('/books') ?>" class="ui button small basic green">Voltar</a>
+  </div>
 <? endif; ?>
