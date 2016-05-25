@@ -167,3 +167,73 @@ body {
 .table td.right, .table th.right {
   text-align: right;
 }
+
+/* PAGE */
+.page {
+  background: url('../imgs/bg_login.png');
+  min-height: 1000px;
+}
+  .page-in {
+    margin: 0 auto;
+    width: 700px;
+    position: relative;
+    top: 50px;
+    background: #FFF;
+    padding: 30px;
+    border-radius: 5px;
+  }
+
+.book-infos {
+  text-align: center;
+  color: #666;
+}
+
+.cover {
+  text-align: center;
+  background: #EFEFEF;
+  padding: 15px;
+  margin: -30px -30px 20px -30px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.alternative-cover {
+  position: relative;
+  width: 140px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.alternative-cover p {
+  position: absolute;
+  top: 35%;
+  left: 0; 
+  width: 100%;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  text-shadow: 1px 1px #000;
+  box-sizing: border-box;
+}
+
+fieldset {
+  margin: 10px 0px 10px 0px;
+  padding: 20px;
+  border: 1px solid #73880A;
+  border-radius: 5px;
+  text-align: center;
+}
+legend {
+  padding: 0px 5px 0px 5px;
+  color: #73880A;
+  font-size: 15px;
+}
+
+.rent-history {
+  margin-top: 20px;
+}
+
+.rent-history h2 {
+  font-weight: normal;
+  text-align: center;
+}

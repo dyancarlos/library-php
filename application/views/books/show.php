@@ -1,42 +1,56 @@
-<p><?= $book->title ?></p>
-<p><?= $book->authors ?></p>
-<p><?= $book->pages ?></p>
-<p><?= $book->name ?></p>
+<div class="page">
+  <div class="page-in">
 
-<br /><br />
+    <div class="cover">
+      <? if(empty($book->cover)): ?>
+        <div class="alternative-cover">
+          <img src="<?= base_url('assets/imgs/cover.png') ?>" />
+          <p><?= $book->title ?></p>
+        </div>          
+      <? else: ?>
+        <img src="<?= $book->cover ?>" />
+      <? endif; ?>
+    </div>
 
-<hr />
+    <div class="book-infos">
+      <h2><?= $book->title ?></h2>
+      <p><?= $book->authors ?></p>
+      <p><?= $book->pages ?> páginas</p>
+      <p>Por: <b><?= $book->name ?></b></p>
+    </div>
 
-<br />
+    <fieldset>
+      <legend>Retirar esse Livro</legend>
+      <? if($book->available): ?>
+        <form action="<?= base_url('/rents/create') ?>" method="post">
+          <input type="hidden" name="book_id" value="<?= $book->id ?>" />
+          <input type="text" name="due_date" placeholder="Data de Devolução" class="input"/>
+          <input type="submit" value="Retirar" class="ui button green" />
+        </form>
+      <? else: ?>
+        <a href="<?= base_url('/rents/give_back/'.$book->id)?>" class="ui button">Devolver</a>
+      <? endif; ?>
+    </fieldset>
 
-<? if($book->available): ?>
-  <form action="<?= base_url('/rents/create') ?>" method="post">
-    <input type="hidden" name="book_id" value="<?= $book->id ?>" />
-    <input type="text" name="due_date" placeholder="Data de Devolução" class="input"/>
-    <input type="submit" value="Retirar" class="ui button" />
-  </form>
-<? else: ?>
-  <a href="<?= base_url('/rents/give_back/'.$book->id)?>" class="ui button">Devolver</a>
-<? endif; ?>
+    <div class="rent-history">
+      <h2>Histórico de Retiradas</h2>
+      <br />
 
-<br /><br />
+      <table class="table">
+        <tr>
+          <th>retirada</th>
+          <th>devolução</th>
+          <th>usuário</th>
+        </tr>
+        <? foreach($rents as $rent): ?>
+          <tr>
+            <td><?= $rent->date ?></td>
+            <td><?= $rent->due_date ?></td>
+            <td><?= $rent->name ?></td>
+          </tr>
+        <? endforeach; ?>
+      </table>
+    </div>
 
-<hr />
-
-<h1>Histórico de Retiradas</h1>
-<br />
-
-<table class="table">
-  <tr>
-    <th>retirada</th>
-    <th>devolução</th>
-    <th>usuário</th>
-  </tr>
-  <? foreach($rents as $rent): ?>
-    <tr>
-      <td><?= $rent->date ?></td>
-      <td><?= $rent->due_date ?></td>
-      <td><?= $rent->name ?></td>
-    </tr>
-  <? endforeach; ?>
-</table>
+  </div>
+</div>
