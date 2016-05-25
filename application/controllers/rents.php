@@ -16,7 +16,7 @@ class Rents extends CI_Controller {
 
   function create(){
     if($this->rent->save()):
-      redirect("/books/my");
+      redirect("/books/show/".$this->input->post('book_id'));
     else:
       echo "error";
     endif;
