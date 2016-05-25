@@ -9,6 +9,19 @@
     <title>Books</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/application.css') ?>" />
     <link rel="stylesheet" href="<?= base_url('assets/css/button.css') ?>" />
+    <link rel="stylesheet" href="<?= base_url('assets/css/jquery.datetimepicker.css') ?>" />
+    <script type="text/javascript" charset="utf-8" src="<?= base_url('assets/js/jquery.js') ?>"></script>
+    <script type="text/javascript" charset="utf-8" src="<?= base_url('assets/js/jquery.datetimepicker.js') ?>"></script>
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function(){
+        $('.date').datetimepicker({
+          timepicker: false,
+          closeOnDateSelect: true,
+          format:'d/m/Y',
+          lang:'pt-BR'
+        });      
+      });
+    </script>
   </head>
   <body>
     <!-- content -->

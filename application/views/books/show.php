@@ -24,7 +24,7 @@
       <? if($book->available): ?>
         <form action="<?= base_url('/rents/create') ?>" method="post">
           <input type="hidden" name="book_id" value="<?= $book->id ?>" />
-          <input type="text" name="due_date" placeholder="Data de Devolução" class="input"/>
+          <input type="text" name="due_date" placeholder="Data de Devolução" class="date input"/>
           <input type="submit" value="Retirar" class="ui button green" />
         </form>
       <? else: ?>
