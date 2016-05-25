@@ -4,6 +4,7 @@ class Books extends CI_Controller {
   function __construct(){
     parent::__construct();
     $this->load->model('book');
+    $this->load->model('rent');
   }
 
   function index(){
@@ -12,7 +13,8 @@ class Books extends CI_Controller {
   }
 
   function show($id){
-    $data['book'] = $this->book->find($id);
+    $data['book']  = $this->book->find($id);
+    $data['rents'] = $this->rent->find_by_book_id($id);
     $this->template->load('template', 'books/show', $data);
   }
 

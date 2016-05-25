@@ -29,6 +29,14 @@ class Book extends CI_Model {
     return json_decode($book);
   }
 
+  function availability_to_false($id){
+    return $this->db->where('id', $id)->update('books', array('available'=>0));
+  }
+
+  function availability_to_true($id){
+    return $this->db->where('id', $id)->update('books', array('available'=>1));
+  }
+
   function save(){
     $data            = $this->input->post();
     $data['user_id'] = $this->session->userdata('logged')['id'];
