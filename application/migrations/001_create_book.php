@@ -38,6 +38,10 @@ class Migration_Create_Book extends CI_Migration {
         'constraint' => '255',
         'null' => TRUE,
       ),
+      'available' => array(
+        'type' => 'BOOLEAN',
+        'default' => true,
+      ),
       'user_id' => array(
         'type' => 'INT',
         'constraint' => 5,
