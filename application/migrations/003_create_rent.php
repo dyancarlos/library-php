@@ -13,7 +13,8 @@ class Migration_Create_Rent extends CI_Migration {
         'type' => 'DATETIME',
       ),
       'due_date' => array(
-        'type' => 'DATETIME',
+        'type' => 'VARCHAR',
+        'contraint' => "10",
       ),
       'book_id' => array(
         'type' => 'INT',

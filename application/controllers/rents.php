@@ -15,10 +15,16 @@ class Rents extends CI_Controller {
   }
 
   function create(){
-    if($this->rent->save()):
-      redirect("/books/show/".$this->input->post('book_id'));
+    $this->form_validation->set_rules('due_date','due_date','required');
+
+    if($this->form_validation->run()):
+      if($this->rent->save()):
+        redirect("/books/show/".$this->input->post('book_id'));
+      else:
+        echo "error";
+      endif;
     else:
-      echo "error";
+      redirect("/books/show/".$this->input->post('book_id'));
     endif;
   }
 }

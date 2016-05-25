@@ -49,7 +49,7 @@
         <? foreach($rents as $rent): ?>
           <tr>
             <td><?= date('d/m/Y H:m:s', strtotime($rent->date)) ?></td>
-            <td><?= date('d/m/Y', strtotime($rent->due_date)) ?></td>
+            <td><?= $rent->due_date ?></td>
             <td><?= $rent->name ?></td>
           </tr>
         <? endforeach; ?>
