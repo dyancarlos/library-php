@@ -28,7 +28,11 @@
           <input type="submit" value="Retirar" class="ui button green" />
         </form>
       <? else: ?>
-        <a href="<?= base_url('/rents/give_back/'.$book->id)?>" class="ui button">Devolver</a>
+        <? if($last->user_id == $this->session->userdata('logged')['id']): ?>
+          <a href="<?= base_url('/rents/give_back/'.$book->id)?>" class="ui button">Devolver</a>
+        <? else: ?>
+          <p><b>Já retirado por:</b> <?= $last->name ?></p>
+        <? endif; ?>
       <? endif; ?>
     </fieldset>
 
