@@ -11,8 +11,11 @@ class Book extends CI_Model {
   }
 
   function find($id){
-    $query = $this->db->get_where("books", array('id'=>$id));
-    return $query->row();
+    $this->db->select('*');
+    $this->db->from('books');
+    $this->db->join('users', 'users.id = books.user_id');
+    $this->db->where('books.id', $id);
+    return $this->db->get()->row();
   }
 
   function find_by_user(){
