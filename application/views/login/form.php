@@ -1,5 +1,7 @@
 <? if(isset($message)): ?>
-  <?= $message ?>
+  <div class="message">
+    <?= $message ?>
+  </div>
 <? endif; ?>
 
 <br />

@@ -72,3 +72,8 @@ body {
     text-shadow: 1px 1px #000;
     box-sizing: border-box;
   }
+
+.message {
+  background: #FAFFAF;
+  padding: 10px;
+}
