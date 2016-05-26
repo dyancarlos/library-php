@@ -6,10 +6,19 @@ class Users extends CI_Controller {
   }
 
   function create(){
-    if($this->user->save()):
-      redirect('/login');
+    $this->form_validation->set_rules('name','name','required');
+    $this->form_validation->set_rules('email','email','required');
+    $this->form_validation->set_rules('password_confirmation','password_confirmation','required');
+    $this->form_validation->set_rules('password','password','required|matches[password_confirmation]');
+
+    if($this->form_validation->run()):
+      if($this->user->save()):
+        redirect('/login');
+      else:
+        echo "error";
+      endif;
     else:
-      echo "error";
+      redirect('/login/signup');
     endif;
   }
 }

@@ -15,6 +15,10 @@
     <input type="password" name="password" placeholder="Senha" />
   </div>
 
+  <div class="field">
+    <input type="password" name="password_confirmation" placeholder="Repita a Senha" />
+  </div>
+
   <br />
   
   <input type="submit" value="Criar minha Conta" class="ui button blue full-size" /><br /><br />

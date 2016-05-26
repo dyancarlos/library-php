@@ -18,6 +18,7 @@ class User extends CI_Model {
   function save(){
     $data             = $this->input->post();
     $data['password'] = md5($data['password']); 
+    unset($data['password_confirmation']);
     return $this->db->insert('users', $data); 
   }
 }
