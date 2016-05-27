@@ -1,8 +1,23 @@
+<style type="text/css" media="all">
+table { width: 100%; border-collapse: collapse; }
+table tr { border-bottom: 1px solid #ddd; }
+table th {
+  padding: 10px;
+  text-align: left;
+  font-variant: small-caps;
+  font-size: 17px;
+  background: #f5f5f5;
+  border-top: 1px solid #DDD;
+  font-weight: normal;
+}
+table td { padding: 10px; }
+</style>
+
 <div class="page">
   <div class="page-in">
 
     <div class="admin">
-      <h1>Meus Livros <a href="<?= base_url('/books/pdf') ?>" class="ui button mini blue">Gerar PDF</a></h1><br />
+      <h1>Livros</h1><br />
 
       <table class="table">
         <tr>
@@ -10,6 +25,7 @@
           <th>autor</th>
           <th>páginas</th>
           <th>editora</th>
+          <th>opções</th>
         </tr>
         <? foreach($books as $book): ?>
           <tr>
@@ -17,6 +33,9 @@
             <td><?= $book->authors ?></td>
             <td><?= $book->pages ?></td>
             <td><?= $book->publisher ?></td>
+            <td>
+              <a href="<?= base_url('/books/destroy/'.$book->id) ?>" class="ui button mini">Excluir</a>
+            </td>
           </tr>
         <? endforeach; ?>
       </table>
@@ -24,3 +43,4 @@
 
   </div>
 </div>
+

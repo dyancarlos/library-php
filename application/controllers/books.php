@@ -32,6 +32,15 @@ class Books extends CI_Controller {
     $this->template->load('template', 'books/my', $data);
   }
 
+  function pdf(){
+    $data['books'] = $this->book->find_by_user();
+    $html = $this->load->view('books/pdf', $data, true);
+    $pdfFilePath = "books.pdf";
+    $this->load->library('M_pdf');
+    $this->m_pdf->pdf->WriteHTML($html);
+    $this->m_pdf->pdf->Output($pdfFilePath, "D"); 
+  }
+
   function create(){
     if($this->book->save()):
       redirect("/books");
