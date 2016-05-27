@@ -31,7 +31,7 @@
         <? if($last->user_id == $this->session->userdata('logged')['id']): ?>
           <a href="<?= base_url('/rents/give_back/'.$book->id)?>" class="ui button">Devolver</a>
         <? else: ?>
-          <p><b>Já retirado por:</b> <?= $last->name ?></p>
+          <p><b>Retirado por</b> <?= $last->name ?> <b>até</b> <?= $last->due_date ?></p>
         <? endif; ?>
       <? endif; ?>
     </fieldset>

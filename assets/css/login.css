@@ -37,42 +37,6 @@ body {
   box-sizing: border-box;
 }
 
-.book-confirm {
-  color: #666;
-  font-size: 14px;
-}
-
-.book-confirm p.description {
-  text-align: justify;
-}
-
-.book-confirm .cover {
-  background: #EFEFEF;
-  padding: 15px;
-  margin: -30px -30px 30px -30px;
-  border-radius: 5px 5px 0px 0px;
-}
-
-  .book-confirm .alternative-cover {
-    position: relative;
-    width: 140px;
-    text-align: center;
-    margin: 0 auto;
-  }
-  
-  .book-confirm .alternative-cover p {
-    position: absolute;
-    top: 35%;
-    left: 0; 
-    width: 100%;
-    color: #FFF;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 10px;
-    text-shadow: 1px 1px #000;
-    box-sizing: border-box;
-  }
-
 .message {
   background: #FAFFAF;
   padding: 10px;

@@ -15,6 +15,7 @@
     <script type="text/javascript" charset="utf-8">
       $(document).ready(function(){
         $('.date').datetimepicker({
+          minDate: 0,
           timepicker: false,
           closeOnDateSelect: true,
           format:'d/m/Y',
