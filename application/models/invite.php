@@ -13,7 +13,7 @@ class Invite extends CI_Model {
   function save(){
     $data            = $this->input->post();
     $data['user_id'] = $this->session->userdata('logged')['id'];
-    return $this->db->insert('invites', $data); 
+    return valid_email($this->input->post('email')) ? $this->db->insert('invites', $data) : false;
   }
 
   function destroy($id){

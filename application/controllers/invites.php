@@ -26,7 +26,7 @@ class Invites extends CI_Controller {
     if($this->invite->destroy($id)):
       redirect("/invites");
     else:
-      echo "Erro";
+      echo "erro";
     endif;
   }
 }
