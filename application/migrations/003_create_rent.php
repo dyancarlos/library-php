@@ -7,14 +7,14 @@ class Migration_Create_Rent extends CI_Migration {
         'type' => 'INT',
         'constraint' => 5,
         'unsigned' => TRUE,
-        'auto_increment' => TRUE
+        'auto_increment' => TRUE,
       ),
       'date' => array(
         'type' => 'DATETIME',
       ),
       'due_date' => array(
         'type' => 'VARCHAR',
-        'contraint' => "10",
+        'constraint' => "10",
       ),
       'book_id' => array(
         'type' => 'INT',
