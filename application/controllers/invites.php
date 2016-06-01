@@ -18,7 +18,7 @@ class Invites extends CI_Controller {
     if($this->invite->save()):
       redirect("/invites");
     else:
-      echo "error";
+      redirect("/invites");
     endif;
   }
 
@@ -26,7 +26,7 @@ class Invites extends CI_Controller {
     if($this->invite->destroy($id)):
       redirect("/invites");
     else:
-      echo "erro";
+      redirect("/invites");
     endif;
   }
 }

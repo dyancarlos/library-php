@@ -15,7 +15,7 @@ class Users extends CI_Controller {
       if($this->user->save()):
         redirect('/login');
       else:
-        echo "error";
+        redirect("/login");
       endif;
     else:
       redirect('/login/signup');

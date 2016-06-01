@@ -45,7 +45,7 @@ class Books extends CI_Controller {
     if($this->book->save()):
       redirect("/books");
     else:
-      echo "error";
+      redirect("/books");
     endif;
   }
 
@@ -53,7 +53,7 @@ class Books extends CI_Controller {
     if($this->book->destroy($id)):
       redirect("/books/my");
     else:
-      echo "Erro";
+      redirect("/books/my");
     endif;
   }
 }
