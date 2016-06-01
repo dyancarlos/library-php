@@ -1,11 +1,3 @@
-<? if(isset($message)): ?>
-  <div class="message">
-    <?= $message ?>
-  </div>
-<? endif; ?>
-
-<br />
-
 <form action="<?= base_url('/login/authenticate') ?>" method="post">
   <h1>login</h1>
 
